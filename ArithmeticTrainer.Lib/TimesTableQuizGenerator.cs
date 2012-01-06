@@ -20,8 +20,8 @@ namespace ArithmeticTrainer.Lib
         {
             var random = new Random();
 
-            var firstNumber = random.Next(Max - Min) + Min;
-            var secondNumber = random.Next(Max - Min) + Min;
+            var firstNumber = random.Next(Max - Min + 1) + Min;
+            var secondNumber = random.Next(Max - Min + 1) + Min;
             return new QuizTriplet
             {
                 FirstNumber = firstNumber,
