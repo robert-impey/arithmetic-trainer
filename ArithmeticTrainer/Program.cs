@@ -18,12 +18,14 @@ namespace ArithmeticTrainer
                 switch (operation)
                 {
                     case "TimesTable":
-                        if (args.Length == 2)
+                        if (args.Length == 3)
                         {
-                            int max;
-                            if (int.TryParse(args[1], out max))
+                            int min, max;
+                            if (int.TryParse(args[1], out min) && int.TryParse(args[2], out max))
                             {
-                                var ttqg = new TimesTableQuizGenerator{
+                                var ttqg = new TimesTableQuizGenerator
+                                {
+                                    Min = min,
                                     Max = max
                                 };
 
@@ -45,7 +47,7 @@ namespace ArithmeticTrainer
                             }
                             else
                             {
-                                Console.WriteLine(string.Format("Unable to parse {0}", args[1]));
+                                Console.WriteLine(string.Format("Unable to parse Min: {0} or Max: {1}", args[1], args[2]));
                             }
                         }
                         else
