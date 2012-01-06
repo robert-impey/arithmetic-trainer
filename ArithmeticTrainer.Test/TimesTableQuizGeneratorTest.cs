@@ -9,17 +9,37 @@ namespace ArithmeticTrainer.Test
         #region Tests
 
         [Test]
-        public void TtqgGeneratesInRange()
+        public void TtqgGeneratesLoeMax()
         {
-            var max = 10;
-            var ttqg = new TimesTableQuizGenerator
-            {
-                Max = max
-            };
-
+            var ttqg = NewTimesTableGenerator();
             var result = ttqg.NewQuizTriplet();
 
-            Assert.LessOrEqual(result.FirstNumber, max);
+            Assert.LessOrEqual(result.FirstNumber, MAX);
+        }
+
+        [Test]
+        public void TtqgGeneratesGoeMin()
+        {
+            var ttqg = NewTimesTableGenerator();
+            var result = ttqg.NewQuizTriplet();
+
+            Assert.GreaterOrEqual(result.FirstNumber, MIN);
+        }
+
+        #endregion
+
+        #region Fixtures
+
+        private const int MIN = 5;
+        private const int MAX = 10;
+
+        private static TimesTableQuizGenerator NewTimesTableGenerator()
+        {
+            return new TimesTableQuizGenerator
+            {
+                Min = MIN,
+                Max = MAX
+            };
         }
 
         #endregion

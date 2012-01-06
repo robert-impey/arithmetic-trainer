@@ -7,7 +7,14 @@ namespace ArithmeticTrainer.Lib
 {
     public class TimesTableQuizGenerator
     {
+        #region Properties
+
+        public int Min { get; set; }
         public int Max { get; set; }
+
+        #endregion
+
+        #region Methods
 
         public QuizTriplet NewQuizTriplet()
         {
@@ -22,5 +29,7 @@ namespace ArithmeticTrainer.Lib
                 Result = firstNumber * secondNumber
             };
         }
+
+        #endregion
     }
 }
