@@ -1,7 +1,7 @@
 ﻿<NUnitProject>
-  <Settings activeconfig="Debug" />
+  <Settings activeconfig="Debug" processModel="Default" domainUsage="Default" />
   <Config name="Debug" binpathtype="Auto">
-    <assembly path="bin\Release\ArithmeticTrainer.Test.dll" />
+    <assembly path="bin\Debug\ArithmeticTrainer.Test.dll" />
   </Config>
   <Config name="Release" binpathtype="Auto" />
 </NUnitProject>
