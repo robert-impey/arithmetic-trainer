@@ -31,14 +31,16 @@ namespace ArithmeticTrainer
 
                                 var quizTriplet = ttqg.NewQuizTriplet();
 
-                                Console.WriteLine(string.Format("{0} x {1} = ", quizTriplet.FirstNumber, quizTriplet.Secondumber));
+                                Console.WriteLine(string.Format("{0} x {1} = ", quizTriplet.FirstNumber,
+                                    quizTriplet.Secondumber));
                                 double usersAnswer;
                                 if (double.TryParse(Console.ReadLine(), out usersAnswer))
                                 {
                                     Console.WriteLine(string.Format("Your answer is {0}", usersAnswer));
                                     Console.WriteLine(string.Format("The correct answer is {0}", quizTriplet.Result));
 
-                                    Console.WriteLine(string.Format("The difference is {0}", Math.Abs(usersAnswer - quizTriplet.Result)));
+                                    Console.WriteLine(string.Format("The difference is {0}",
+                                        Math.Abs(usersAnswer - quizTriplet.Result)));
                                 }
                                 else
                                 {

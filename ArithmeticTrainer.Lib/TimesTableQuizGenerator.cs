@@ -4,6 +4,8 @@ namespace ArithmeticTrainer.Lib
 {
     public class TimesTableQuizGenerator
     {
+        readonly Random random = new Random();
+
         #region Properties
 
         public int Min { get; set; }
@@ -15,8 +17,6 @@ namespace ArithmeticTrainer.Lib
 
         public QuizTriplet NewQuizTriplet()
         {
-            var random = new Random();
-
             var firstNumber = random.Next(Max - Min + 1) + Min;
             var secondNumber = random.Next(Max - Min + 1) + Min;
             return new QuizTriplet
