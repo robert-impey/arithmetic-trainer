@@ -2,10 +2,10 @@
 {
     public struct QuizTriplet
     {
-		private double _firstNumber;
-		private double _secondNumber;
+		private readonly double _firstNumber;
+		private readonly double _secondNumber;
 
-		private double _result;
+		private readonly double _result;
 
 		public QuizTriplet(double firstNumber, double secondNumber, double result)
 		{
