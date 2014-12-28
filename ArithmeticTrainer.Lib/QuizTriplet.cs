@@ -2,9 +2,22 @@
 {
     public struct QuizTriplet
     {
-        public double FirstNumber { get; set; }
-        public double Secondumber { get; set; }
+		private double _firstNumber;
+		private double _secondNumber;
 
-        public double Result { get; set; }
+		private double _result;
+
+		public QuizTriplet(double firstNumber, double secondNumber, double result)
+		{
+			_firstNumber = firstNumber;
+			_secondNumber = secondNumber;
+
+			_result = result;
+		}
+
+        public double FirstNumber { get { return _firstNumber; } }
+        public double Secondumber { get { return _secondNumber; } }
+
+        public double Result { get { return _result; } }
     }
 }
